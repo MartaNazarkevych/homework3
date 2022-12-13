@@ -134,8 +134,8 @@ body {
 }
 
 .tittle-section {
-  min-width: 1440px;
-  background: var(--primary-text-color);
+  max-width: 1440px;
+  margin: 0 auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.7),
       rgba(47, 48, 58, 0.7)
@@ -211,11 +211,10 @@ body {
 .icon-main {
   display: flex;
   justify-content: center;
-  width: 264px;
+  align-items: center;
   height: 112px;
   background-color: #f4f4fd;
   border-radius: 4px;
-  padding: 24px 100px;
   margin-bottom: 8px;
 }
 
@@ -335,14 +334,15 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  fill: #F4F4FD;
+  fill: #f4f4fd;
 }
 
-.team-svg-link:hover {
+.team-svg-link:hover,
+.team-svg-link:focus {
   background-color: #31d0aa;
 }
 
-.svg-icon:focus {
+.team-svg-link:focus {
   fill: #f4f4fd;
 }
 
@@ -361,60 +361,53 @@ body {
 }
 
 .section-customers {
-  text-align: center;
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.customers-tittle {
-  font-family: var(--primary-font);
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 72px;
+.section-customer-icon:not(:last-child) {
+    margin-right: 24px;
+}
+
+.section-customer-icon {
+  color: #8E8F99;
 }
 
 .section-customer-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+}
+
+.customers-tittle {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  line-height: 1.11;
+  margin-bottom: 72px;
 }
 
 .customer-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  color: #8E8F99; border: 1px solid #8E8F99;
 }
 
 .customer-icon {
   width: 168px;
   height: 88px;
-  margin-bottom: 8px;
   padding: 16px 32px;
-  fill: #8e8f99;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
+  fill: currentColor;
 }
 
-.customer-icon:hover {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
+.customer-link:hover,
+.customer-link:focus {
+ color: #4D5AE5; border: 1px solid #4D5AE5;
 }
 
-.customer-icon:hover {
-  fill: var(--accent-color);
-}
-
-.customer-icon-div {
-  display: flex;
-  justify-content: center;
-  gap: var(--card-set-gap);
-  margin-top: 12px;
-}
-
-.section-customer-icon {
-  flex-basis: calc((100% - 120) / 6);
-}
 
 .footer-container {
   display: flex;
@@ -460,9 +453,7 @@ body {
 }
 
 .footer-icon-tittle {
-  display: flex;
   color: #ffffff;
-  width: 264px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -482,10 +473,11 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  fill: #F4F4FD;
+  fill: #f4f4fd;
 }
 
-.footer-icon-link:hover {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: #31d0aa;
 }
 
